@@ -1,19 +1,19 @@
 # Unity_TechnicalTest
 Technical Test for Unity Developer
 
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# ++ Tangelo Games - Technical Test - Unity Game Developer ++
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# ++ Last version : 13/07/2018
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++ Tangelo Games - Technical Test - Unity Game Developer ++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++ Last version : 13/07/2018
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-# This test contains:
+This test contains:
 
  - Unity project ready to be imported from Unity 2018.2
  - A first test to evaluate programming and optimization skills, implementing a Spawner
  - A second test (to implement the first test in 2D and for WebGL)
 
-# Steps:
+Steps:
 
 Open the Unity Project and find all "QUESTION" comments. You will see something like that:
 
