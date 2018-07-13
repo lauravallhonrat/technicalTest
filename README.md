@@ -2,10 +2,15 @@
 Technical Test for Unity Developer
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ++ Tangelo Games - Technical Test - Unity Game Developer ++
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 ++ Last version : 13/07/2018
+
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 
 This test contains:
 
