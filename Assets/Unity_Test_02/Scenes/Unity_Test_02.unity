@@ -563,7 +563,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.51361114, b: 0.5660378, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -1359,7 +1359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ed82df801f36641b30c4c6a52c11ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteTexture: {fileID: 2800000, guid: 6168ce4a9f22500449d22bf00eb62e36, type: 3}
 --- !u!114 &1662727655
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -99,14 +99,10 @@ namespace Tangelo.Test.Managers
                     //calculate percentage slider
                     PreparePools(i / m_MaxMassiveSpawningObjects);
                 }
-                else
-                {
-                    //waits 1 frame
-                    yield return null;
-                }
+                //waits 1 frame
+                yield return null;
             }
         }
-
 
         // QUESTION 7: Implement here a massive recycling of the objects currently visible in the screen
         // FPS Can't drop below 50fps when MassiveRecycle is being executed
@@ -121,20 +117,18 @@ namespace Tangelo.Test.Managers
             SpinnerComponent[] allCubes = FindObjectsOfType<SpinnerComponent>();
             float currentFPS;
             int i = 0;
-            while (i < m_MaxRecycleObjects && allCubes.Length > i )
+            
+            while (i < m_MaxRecycleObjects && i < allCubes.Length  )
             {
                 currentFPS = 1 / Time.deltaTime;
                 if (currentFPS >= 60 )
                 {
                     spawnerComponent.Recycle(m_type, allCubes[i].gameObject);
                     i++;
-                    PreparePools((float)i / m_MaxRecycleObjects);//convert i to float only in this section to know percentage
+                    PreparePools((float)i / m_MaxRecycleObjects);//casting i to float only in this section to know percentage
                 }
-                else
-                {
-                    //waits 1 frame
-                    yield return null;
-                }
+                //waits 1 frame
+                yield return null;
             }
         }
     }

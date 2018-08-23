@@ -23,16 +23,13 @@ namespace Tangelo.Test.Components
         //we create a static dictionary that will contain the pool type kind and a list of objects, also allows to add more primitiveTypes, not only cubes :)
         private Dictionary<PrimitiveType, List<GameObject>> pooling = new Dictionary<PrimitiveType, List<GameObject>>();
 
-       public Texture2D spriteTexture;
-       private Sprite mySprite;
-       private SpriteRenderer sr;
+       GameObject sprite;
 
 
         private void Initialize()
         {
             gm = FindObjectOfType<Tangelo.Test.Managers.GameManager>();
-
-            sr = gameObject.AddComponent<SpriteRenderer>() as SpriteRenderer;
+            sprite = Resources.Load("Nintendo Sprite") as GameObject;
 
             //Adding each kind of pooltype by creating a new list
             pooling.Add(PrimitiveType.Cube, new List<GameObject>());
@@ -61,7 +58,6 @@ namespace Tangelo.Test.Components
 
         public void Spawn(PrimitiveType primitiveType, Transform transform)
         {
-
             //searching the object kind in the pool
             GameObject spawnedObject = GetElement(primitiveType);
 
@@ -71,9 +67,7 @@ namespace Tangelo.Test.Components
                 //2D
                 if (primitiveType == PrimitiveType.Quad)
                 {
-                   spawnedObject = GameObject.CreatePrimitive(primitiveType);
-                   mySprite = Sprite.Create(spriteTexture, new Rect(0.0f, 0.0f, spriteTexture.width, spriteTexture.height), new Vector2(0.5f, 0.5f), 100.0f);
-                   sr.sprite = mySprite;
+                    spawnedObject = Instantiate(sprite);
                 }
                 else 
                     spawnedObject = GameObject.CreatePrimitive(primitiveType);
@@ -107,7 +101,6 @@ namespace Tangelo.Test.Components
                 gm.spawned++;
             else
                 gm.recicled++;
-
         }
     }
 }
